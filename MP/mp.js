@@ -1,69 +1,38 @@
 // audio
 
 const playbtn = document.getElementsByClassName("playbtn")[0];
-console.log(playbtn);
-playbtn.addEventListener("click", changeBtn);
-
-function changeBtn() {
-  const play = document.createAttribute("btn")[0];
-}
-
-// //play song
-// const audio = document.getElementsByTagName("audio")[0];
-// audio.src = "https://www.youtube.com/watch?v=uJ_1HMAGb4k";
-// audio.play();
-// console.log("AUD", audio);
-const playBtn = document.getElementsByTagName("button")[0];
-const nextBtn = document.getElementsByTagName("button")[1];
+const nextBtn = document.getElementsByTagName("button")[2];
 const audioPlayer = document.getElementsByTagName("audio")[0];
 const playIcon = document.getElementsByClassName("fa-play")[0];
-const plauseIcon = document.getElementsByClassName("fa-pause")[0];
-const songTitle = document.getElementById("songTitle");
+const pauseIcon = document.getElementsByClassName("fa-pause")[0];
+console.log(playbtn);
+console.log(nextBtn);
+playbtn.addEventListener("click", () => {
+  console.log("AP", audioPlayer.paused);
+  console.assertlog(currentSong);
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    playIcon.classList.add("hide");
+    pauseIcon.classList.remove("hide");
+    song_name.textContent = playList[currentSong].name;
+  } else {
+    audioPlayer.pause();
+    playIcon.classList.remove("hide");
+    pauseIcon.classList.add("hide");
+  }
+  console.log("AP", audioPlayer.paused);
+});
 
 const playList = [
   {
-    name: "UKULELE",
-    src: "./assets/songs/music-player_music_ukulele.mp3",
+    title: Harp,
+    source: "./music2.mp3",
   },
   {
-    name: "SUMMER",
-    src: "./assets/songs/music-player_music_summer.mp3",
+    title: Guitar,
+    source: "./m3.mp3",
   },
 ];
-const playListName = ["SUMMER"];
+const playlistgName = ["Harp"];
 let currentSong = 0;
-
-playBtn.addEventListener("click", () => {
-  // duugaa togluulna
-  //   audioPlayer.paused // => true
-  //tuhain duu yavj bga eseh
-  console.log("CS", currentSong);
-  console.log("AP", audioPlayer.paused);
-  if (audioPlayer.paused) {
-    //tuhain duu zogsoj bga
-    audioPlayer.play();
-    // playBtn.textContent = "Pause";
-    playIcon.classList.add("hide");
-    plauseIcon.classList.remove("hide");
-    songTitle.textContent = playList[currentSong].name;
-  } else {
-    // tuhain duu yavj bga
-    audioPlayer.pause();
-    // playBtn.textContent = "Play";
-    playIcon.classList.remove("hide");
-    plauseIcon.classList.add("hide");
-  }
-  console.log("AP", audioPlayer.paused);
-});
-
-nextBtn.addEventListener("click", () => {
-  currentSong++;
-  // daraagiin duug toguluulah
-  if (currentSong === playList.length) {
-    currentSong = 0;
-  }
-  audioPlayer.src = playList[currentSong].src;
-  songTitle.textContent = playList[currentSong].name;
-  audioPlayer.play();
-  console.log("CS", currentSong);
-});
+nextBtn.addEventListener("click", () => {});

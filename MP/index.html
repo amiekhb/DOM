@@ -12,23 +12,35 @@
   </head>
   <body>
     <div class="music">
-      <div class="playlist"></div>
+      <div class="playlist">
+        <div class="pl1">
+          <!-- <div class="song_name">Harp</div> -->
+          <audio src="./music2.mp3"></audio>
+        </div>
+        <div class="pl1">
+          <!-- <div class="song_name">Guitar</div> -->
+          <audio src="./m3.mp3"></audio>
+        </div>
+      </div>
       <div class="playbutton">
-        <div class="pic"></div>
+        <div class="pic spin"></div>
         <div class="buttons">
           <button><i class="fa-solid fa-backward"></i></button>
 
           <button class="playbtn">
-            <span class=""><i class="fa-solid fa-play"></i></span>
-
-            <span class=""> <i class="fa-solid fa-pause"></i></span>
+            <span class="fa-play"><i class="fa-solid fa-play"></i></span>
+            <span class="fa-pause hide">
+              <i class="fa-solid fa-pause"></i
+            ></span>
           </button>
 
-          <button><i class="fa-solid fa-forward"></i></button>
+          <button class="nextBtn">
+            <span><i class="fa-solid fa-forward"></i></span>
+          </button>
         </div>
       </div>
     </div>
-    <audio src="https://www.youtube.com/watch?v=uJ_1HMAGb4k"></audio>
+
     <script src="mp.js"></script>
   </body>
 </html>

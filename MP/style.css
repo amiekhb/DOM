@@ -39,22 +39,31 @@ body {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-color: aquamarine;
+  background-image: url("https://thumbs.dreamstime.com/b/pink-cosmos-flowe-flowerbackground-112007426.jpg");
   position: absolute;
   top: -15px;
+  background-size: cover;
 }
 button {
   border-style: hidden;
-}
-
-.show {
-  display: block;
 }
 
 .hide {
   display: none;
 }
 
-/* .fa-pause {
-  display: none;
-} */
+.spin {
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
